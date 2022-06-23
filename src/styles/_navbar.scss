@@ -1,0 +1,21 @@
+#Navbar{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-between;
+  background-color: lightblue;
+  width:100%;
+
+  ul{
+    list-style-type: none;
+    padding: none;
+    margin: none;
+  }
+  li {
+    float: left;
+  }
+  a{
+    display: block;
+    padding: 8px;
+  }
+}
