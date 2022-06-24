@@ -3,19 +3,48 @@
   flex-direction: row;
   position: relative;
   justify-content: space-between;
-  background-color: lightblue;
+  background-color: rgb(217, 151, 90);
   width:100%;
+  align-items: center;
+  height:100px;
 
+  h1{
+    display: flex;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  }
+  #vinyl{
+    padding-left:10px;
+    padding-right:15px;
+  }
+  nav{
+
+  }
   ul{
     list-style-type: none;
-    padding: none;
-    margin: none;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
   }
   li {
     float: left;
+    padding-right: 20px;
+    font-size: large;
+  }
+  a, a:visited, a:hover, a:active {
+    color:inherit;
   }
   a{
     display: block;
     padding: 8px;
+    text-decoration: none;
+  }
+  #shopping-cart{
+    padding-left: 10px;
+    padding-right: 25px;
+  }
+  #shopping-cart-a{
+    padding-top:5px;
+    border-bottom:0px;
   }
 }

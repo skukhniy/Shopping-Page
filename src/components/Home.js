@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import vinylShop from '../assets/vinyl-shop-1.jpeg';
 
 export default function Home() {
   return (
     <div>
-      <h1>Home</h1>
+      <img src={vinylShop} alt="vinyl shop" />
     </div>
-  )
+  );
 }
