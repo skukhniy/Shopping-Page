@@ -1,0 +1,65 @@
+#shopContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 15px;
+  padding-left: 15px;
+  padding-right:15px;
+  
+  #shopCard{
+    text-align: center;
+    margin-bottom: 20px;
+    padding-right: 20px;
+    h3, h5, p{
+      margin-bottom: 0;
+      margin-top:0;
+    }
+    h5{
+      margin-top: 5px;
+      margin-bottom:5px;
+    }
+    &:hover{
+      img{
+        color:white;
+        opacity:50%;
+      }
+      cursor: pointer;
+    }
+    a {
+      text-decoration: none;
+      color:inherit;
+    }
+  }
+  #shopCard > img{
+    height:250px;
+  }
+  #shopCard > p {
+    font-size: small;
+    color: maroon;
+  }
+}
+
+#albumDetails{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height:80vh;
+  #albumContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    h5{
+      margin-top: 0;
+    }
+    img{
+      height:350px;
+      width:350px;
+    }
+  }
+  #albumInfo{
+    text-align: center;
+    margin-top: auto;
+    margin-bottom:auto;
+  }
+}

@@ -1,12 +1,14 @@
 #Navbar{
   display: flex;
   flex-direction: row;
-  position: relative;
+  position: sticky;
   justify-content: space-between;
   background-color: rgb(217, 151, 90);
   width:100%;
   align-items: center;
   height:100px;
+  top:0px;
+  z-index: 1;
 
   h1{
     display: flex;
