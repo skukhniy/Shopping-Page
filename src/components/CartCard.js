@@ -10,9 +10,10 @@ export default function CartCard({
     const num = parseInt(e.target.value);
     setQuantity(num); // update quantity
     // update cart array
-    const oldArray = cartArray;
+    const oldArray = [...cartArray];
     const albumIndex = cartArray.findIndex((x) => x.id === id);
     oldArray[albumIndex].quantity = num;
+    setCart(oldArray);
   }
 
   function removeItem() {
@@ -25,7 +26,7 @@ export default function CartCard({
     <div id="cartCardContainer">
       <img src={img} alt="album cover" />
       <p className="albumName">{`${artist} - ${name} `}</p>
-      <input type="number" pattern="[0-9]*" min="0" max="9" defaultValue={albumQuantity} onChange={updateQuantity} />
+      <input type="number" pattern="[0-9]*" min="1" max="9" defaultValue={albumQuantity} onChange={updateQuantity} />
       <p className="price">{`$${price}`}</p>
       <FaTimes id="deleteItem" onClick={removeItem} />
 

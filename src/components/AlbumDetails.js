@@ -38,7 +38,7 @@ export default function AlbumDetails({
         <h4>{`$${price}`}</h4>
         <div id="quantitySelector">
           <p>Quantity:</p>
-          <input type="number" pattern="[0-9]*" min="0" max="9" defaultValue={1} onChange={updateQuantity} />
+          <input type="number" pattern="[0-9]*" min="1" max="9" defaultValue={1} onChange={updateQuantity} />
         </div>
         <div>
           <button type="button" onClick={addToCart}>Add to Cart</button>

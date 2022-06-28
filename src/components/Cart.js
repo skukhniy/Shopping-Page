@@ -22,7 +22,7 @@ export default function Cart({ cartArray, setCart }) {
         {cartCards}
       </div>
       <div id="checkoutTotal">
-        <CartTotal />
+        <CartTotal cartArray={cartArray} />
       </div>
     </div>
   );
