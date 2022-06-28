@@ -61,5 +61,25 @@
     text-align: center;
     margin-top: auto;
     margin-bottom:auto;
+
+    #quantitySelector{
+      p{
+        display:inline-block;
+        padding-right: 5px;
+      }
+      input{
+        width: 30px;
+        height:20px;
+        display: inline-block;
+      }
+    }
+    button{
+      margin-top: 21px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+
+    
   }
 }

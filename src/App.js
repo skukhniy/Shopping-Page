@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
@@ -9,8 +9,24 @@ import AlbumDetails from './components/AlbumDetails';
 import albumData from './albumData';
 
 function App() {
+  const [cartArray, setCart] = useState([]);
+
+  // generates webpages for every album
   const albumRoutes = albumData.map((albums) => (
-    <Route path={`/shop/${albums.id}`} element={<AlbumDetails name={albums.name} artist={albums.artist} price={albums.price} img={albums.image} />} />
+    <Route
+      path={`/shop/${albums.id}`}
+      element={(
+        <AlbumDetails
+          name={albums.name}
+          artist={albums.artist}
+          price={albums.price}
+          img={albums.image}
+          id={albums.id}
+          cartArray={cartArray}
+          setCart={setCart}
+        />
+)}
+    />
   ));
   return (
     <div>
@@ -20,7 +36,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           {albumRoutes}
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/cart" element={<Cart cartArray={cartArray} setCart={setCart} />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,0 +1,39 @@
+#cartContainer{
+  display:flex;
+  flex-direction: row;
+  #cartList{
+    h3{
+      padding-bottom:15px;
+      border-bottom: 1px solid grey;
+      margin-bottom: 0px;
+    }
+  }
+  #cartCardContainer{
+    display: grid;
+    grid-template-columns: 100px 250px 40px 200px 50px;
+    padding-bottom:15px;
+    padding-top:15px;
+    border-bottom:1px solid grey;
+    align-items: center;
+    img{
+      height: 100px;
+      width:100px;
+    }
+    p{
+      display: inline-block;
+    }
+    .albumName{
+      margin-left: 20px;
+    }
+    .price{
+      margin-left: 30px;
+      margin-right:5px; 
+      color:maroon;
+    }
+  }
+  #deleteItem{
+    &:hover{
+      cursor: pointer;
+    }
+  }
+}
