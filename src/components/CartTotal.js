@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function CartTotal({ cartArray }) {
   // add prices together
@@ -8,6 +9,7 @@ export default function CartTotal({ cartArray }) {
       subtotal += (item.quantity * item.price);
     });
     subtotal = Math.round(subtotal * 100) / 100;
+
     return subtotal;
   }
   return (
@@ -27,7 +29,7 @@ export default function CartTotal({ cartArray }) {
           <span>{`$${fetchSubtotal()}`}</span>
         </h4>
       </div>
-      <button type="button">Check Out</button>
+      <Link to="/checkout"><button type="button">Check Out</button></Link>
     </div>
   );
 }

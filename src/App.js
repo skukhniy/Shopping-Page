@@ -7,6 +7,7 @@ import Cart from './components/Cart';
 import './styles/App.scss';
 import AlbumDetails from './components/AlbumDetails';
 import albumData from './albumData';
+import FakeStore from './components/FakeStore';
 
 function App() {
   const [cartArray, setCart] = useState([]);
@@ -37,6 +38,7 @@ function App() {
           <Route path="/shop" element={<Shop />} />
           {albumRoutes}
           <Route path="/cart" element={<Cart cartArray={cartArray} setCart={setCart} />} />
+          <Route path="/checkout" element={<FakeStore />} />
         </Routes>
       </BrowserRouter>
     </div>

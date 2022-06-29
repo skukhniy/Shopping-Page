@@ -3,7 +3,7 @@ import CartCard from './CartCard';
 import CartTotal from './CartTotal';
 
 export default function Cart({ cartArray, setCart }) {
-  const cartCards = cartArray.map((albums) => (
+  let cartCards = cartArray.map((albums) => (
     <CartCard
       name={albums.name}
       artist={albums.artist}
@@ -15,6 +15,10 @@ export default function Cart({ cartArray, setCart }) {
       setCart={setCart}
     />
   ));
+  if (cartCards.length === 0) {
+    cartCards = <p id="cartEmpty">Cart is Empty</p>;
+  }
+
   return (
     <div id="cartContainer">
       <div id="cartList">

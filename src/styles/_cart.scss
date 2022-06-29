@@ -1,6 +1,13 @@
 #cartContainer{
   display:flex;
   flex-direction: row;
+
+  #cartEmpty{
+    width:48.5vw;
+    height:10vh;
+    font-size: large;
+    text-align: center;
+  }
   #cartList{
     margin-left: 5vw;
     h3{
@@ -61,6 +68,14 @@
     button{
       display: block;
       margin: 0 auto;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+    a{
+      display: block;
+      padding: 8px;
+      text-decoration: none;
     }
   }
 }
