@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import albumData from '../albumData';
 
 export default function AlbumDetails({
-  name, artist, img, price, cartArray, setCart, id,
+  name, artist, img, price, cartArray, setCart, id, backgroundColor,
 }) {
   const [quantity, setQuantity] = useState(1);
 
@@ -21,20 +21,21 @@ export default function AlbumDetails({
       albumObj.quantity = quantity;
       setCart([...cartArray, albumObj]);
     } else {
-      const oldArray = cartArray;
+      const oldArray = [...cartArray];
       const albumIndex = cartArray.findIndex((x) => x.id === id);
       oldArray[albumIndex].quantity += quantity;
+      setCart(oldArray);
     }
   }
 
   return (
-    <div id="albumDetails">
+    <div id="albumDetails" style={{ backgroundColor: `${backgroundColor}` }}>
       <div id="albumContainer">
         <img src={img} alt="album cover" />
-        <h3>{name}</h3>
-        <h5>{artist}</h5>
       </div>
       <div id="albumInfo">
+        <h1>{name}</h1>
+        <h3>{artist}</h3>
         <h4>{`$${price}`}</h4>
         <div id="quantitySelector">
           <p>Quantity:</p>

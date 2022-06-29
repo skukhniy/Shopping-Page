@@ -4,17 +4,21 @@
 }
 #AboutDiv{
   position: absolute;
-  background-color: rgb(0,0,0,.65);
+  background-color: rgb(0,0,0,.7);
   color: white;
   width:50vw;
   height:75vh;
-  h2{
+  h1{
     text-align: center;
+    margin-bottom: 40px;
+    margin-top:40px;
+    font-weight: 500;
   }
   p{
-    font-size: large;
-    padding-left:4vw;
-    padding-right:4vw;
+    font-size: larger;
+    font-weight: 100;
+    padding-left:5vw;
+    padding-right:5vw;
   }
 }
 #newArrivalContainer{

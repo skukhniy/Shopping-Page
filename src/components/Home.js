@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div>
       <div id="AboutDiv">
-        <h2>Welcome to Stanley&#39;s Records</h2>
+        <h1>Welcome to Stanley&#39;s Records</h1>
         <p>
           {`If you’re a passionate music fan, Stanley's Records is the place for you.
           Our goal is to change the way you buy records. `}

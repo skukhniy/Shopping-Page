@@ -2,7 +2,20 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaShoppingCart, FaCompactDisc } from 'react-icons/fa';
 
-export default function Navbar() {
+export default function Navbar({ cartArray }) {
+  let cartNumber;
+  if (cartArray.length !== 0) {
+    let cartAmt = 0;
+    cartArray.forEach((album) => {
+      cartAmt += album.quantity;
+      console.log(cartAmt);
+    });
+    cartNumber = (
+      <div id="cartNumber">
+        <p>{String(cartAmt)}</p>
+      </div>
+    );
+  }
   return (
     <div id="Navbar">
       <h1>
@@ -20,6 +33,7 @@ export default function Navbar() {
           <li>
             <Link to="/cart" id="shopping-cart-a">
               <FaShoppingCart id="shopping-cart" size="1.5em" />
+              {cartNumber}
             </Link>
           </li>
         </ul>

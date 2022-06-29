@@ -23,6 +23,7 @@ function App() {
           price={albums.price}
           img={albums.image}
           id={albums.id}
+          backgroundColor={albums.backgroundColor}
           cartArray={cartArray}
           setCart={setCart}
         />
@@ -32,7 +33,7 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Navbar />
+        <Navbar cartArray={cartArray} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />

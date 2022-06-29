@@ -10,6 +10,7 @@ export default function Shop() {
       artist={albums.artist}
       price={albums.price}
       id={albums.id}
+      backgroundColor={albums.backgroundColor}
     />
   ));
   return (

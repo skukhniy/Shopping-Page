@@ -6,7 +6,7 @@
   background-color: #d9975a;
   width:100%;
   align-items: center;
-  height:100px;
+  height:15.5vh;
   top:0px;
   z-index: 10;
 
@@ -48,5 +48,27 @@
   #shopping-cart-a{
     padding-top:5px;
     border-bottom:0px;
+    position: relative;
+  }
+  #cartNumber{
+    background-color: red;
+    color:white;
+    border-radius: 50%;
+    width:20px;
+    height:20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom:0;
+    right:0;
+    transform: translate(-110%,-30%);
+
+
+
+    p{
+      text-align: center;
+      font-size:small;
+    }
   }
 }
