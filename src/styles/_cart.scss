@@ -51,7 +51,7 @@
     padding-left:10px;
     padding-right:10px;
     padding-bottom:10px;
-    width:15vw;
+    width:22.5vw;
     h3{
       padding-bottom: 15px;
       border-bottom: 1px solid grey;
@@ -65,12 +65,32 @@
       border-top: 1px solid grey;
       padding-top: 5px;
     }
-    button{
+    #checkoutButton{
       display: block;
       margin: 0 auto;
       &:hover{
         cursor: pointer;
       }
+      background-color: white;
+      border: 1px solid black;
+      height:30px;
+      width:135px;
+      font-weight: 500;
+    }
+    #paypalCheckout{
+      background: none;
+      border:none;
+      display: block;
+      margin:auto;
+      img {
+        height:26px;        
+      }
+    }
+    #acceptedPayment{
+      width:200px;
+      display: block;
+      margin:auto;
+      margin-top: 30px;
     }
     a{
       display: block;

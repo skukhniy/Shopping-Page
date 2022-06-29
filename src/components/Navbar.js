@@ -8,7 +8,6 @@ export default function Navbar({ cartArray }) {
     let cartAmt = 0;
     cartArray.forEach((album) => {
       cartAmt += album.quantity;
-      console.log(cartAmt);
     });
     cartNumber = (
       <div id="cartNumber">

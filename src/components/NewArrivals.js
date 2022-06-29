@@ -16,7 +16,7 @@ export default function NewArrivals() {
   ));
   const settings = {
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2750,
     slidesToShow: 3,
     dots: true,
   };
