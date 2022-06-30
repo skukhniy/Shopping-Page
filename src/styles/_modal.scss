@@ -1,0 +1,50 @@
+.Modal{
+  position:fixed;
+  right:100vw;
+  background-color: white;
+  width:25%;
+  height:65%;
+  transition: left 1s ease-out;
+  z-index:10;
+}
+.Modal.Show{
+  right:0;
+}
+
+.Overlay{
+  background-color: rgb(0,0,0,.25);
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  position: fixed;
+  display: none;
+  z-index: 5;
+}
+.Overlay.Show{
+  display:block;
+}
+#CartModalContainer{
+  #ModalHeader{
+    background-color: rgb(206, 249, 206);
+    width:100%;
+    height:10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+      margin: 0;
+      font-weight: 100;
+    }
+  }
+  
+  #albumModal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    img{
+      height:20vh;
+      
+    }
+  }
+}

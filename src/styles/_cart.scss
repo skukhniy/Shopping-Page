@@ -8,6 +8,7 @@
     font-size: large;
     text-align: center;
   }
+
   #cartList{
     margin-left: 5vw;
     h3{
@@ -16,6 +17,8 @@
       margin-bottom: 0px;
     }
   }
+
+
   #cartCardContainer{
     display: grid;
     grid-template-columns: 100px 250px 40px 200px 50px;
@@ -39,11 +42,15 @@
       color:maroon;
     }
   }
+
   #deleteItem{
     &:hover{
       cursor: pointer;
     }
   }
+
+
+  
   #cartTotalContainer{
     margin-top:5vw;
     margin-left: 10vw;
@@ -82,6 +89,9 @@
       border:none;
       display: block;
       margin:auto;
+      &:hover{
+        cursor: pointer;
+      }
       img {
         height:26px;        
       }

@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import CartModal from './CartModal';
 import albumData from '../albumData';
 
 export default function AlbumDetails({
   name, artist, img, price, cartArray, setCart, id, backgroundColor,
 }) {
+  const [displayModal, setDisplayModal] = useState(false);
+
   const [quantity, setQuantity] = useState(1);
 
   // fix the current quantity under state
@@ -14,7 +17,6 @@ export default function AlbumDetails({
   function addToCart() {
     // grab album data
     const albumObj = albumData.find((x) => x.id === id);
-
     // if album isnt already in the cart array, add it
     // otherwise find the album data in the cart array and adjust the quantity.
     if (cartArray.find((x) => x.id === id) === undefined) {
@@ -30,6 +32,17 @@ export default function AlbumDetails({
 
   return (
     <div id="albumDetails" style={{ backgroundColor: `${backgroundColor}` }}>
+      {displayModal && (
+      <div className={`Modal ${displayModal ? 'Show' : ''}`}>
+        <CartModal
+          name={name}
+          artist={artist}
+          img={img}
+          price={price}
+          cartArray={cartArray}
+        />
+      </div>
+      )}
       <div id="albumContainer">
         <img src={img} alt="album cover" />
       </div>
@@ -42,9 +55,15 @@ export default function AlbumDetails({
           <input type="number" pattern="[0-9]*" min="1" max="9" defaultValue={1} onChange={updateQuantity} />
         </div>
         <div>
-          <button type="button" onClick={addToCart}>Add to Cart</button>
+          <button type="button" onClick={() => { addToCart(); setDisplayModal(true); }}>Add to Cart</button>
         </div>
       </div>
+      {displayModal && (
+      <div
+        className={`Overlay ${displayModal ? 'Show' : ''}`}
+        onClick={() => setDisplayModal(!displayModal)}
+      />
+      )}
     </div>
   );
 }
