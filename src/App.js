@@ -11,6 +11,8 @@ import FakeStore from './components/FakeStore';
 
 function App() {
   const [cartArray, setCart] = useState([]);
+  const [subtotalState, setSubtotal] = useState(0);
+  const [items, setItems] = useState(0);
 
   // generates webpages for every album
   const albumRoutes = albumData.map((albums) => (
@@ -26,6 +28,10 @@ function App() {
           backgroundColor={albums.backgroundColor}
           cartArray={cartArray}
           setCart={setCart}
+          subtotalState={subtotalState}
+          setSubtotal={setSubtotal}
+          items={items}
+          setItems={setItems}
         />
 )}
     />
@@ -38,7 +44,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           {albumRoutes}
-          <Route path="/cart" element={<Cart cartArray={cartArray} setCart={setCart} />} />
+          <Route path="/cart" element={<Cart cartArray={cartArray} setCart={setCart} subtotalState={subtotalState} setSubtotal={setSubtotal} />} />
           <Route path="/checkout" element={<FakeStore />} />
         </Routes>
       </BrowserRouter>

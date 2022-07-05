@@ -2,7 +2,9 @@ import React from 'react';
 import CartCard from './CartCard';
 import CartTotal from './CartTotal';
 
-export default function Cart({ cartArray, setCart }) {
+export default function Cart({
+  cartArray, setCart, subtotalState, setSubtotal,
+}) {
   let cartCards = cartArray.map((albums) => (
     <CartCard
       name={albums.name}
@@ -26,7 +28,7 @@ export default function Cart({ cartArray, setCart }) {
         {cartCards}
       </div>
       <div id="checkoutTotal">
-        <CartTotal cartArray={cartArray} />
+        <CartTotal cartArray={cartArray} subtotalState={subtotalState} setSubtotal={setSubtotal} />
       </div>
     </div>
   );

@@ -50,6 +50,10 @@
     }
     button{
       margin-top: 21px;
+      height:40px;
+      width:130px;
+      background-color: white;
+      border: 1px solid black;
       &:hover{
         cursor: pointer;
       }

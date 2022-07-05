@@ -11,11 +11,11 @@ export default function CartTotal({ cartArray }) {
     subtotal = Math.round(subtotal * 100) / 100;
     const taxrate = 0.09;
     const tax = Math.round((subtotal * taxrate) * 100) / 100;
-    console.log(tax);
     const total = Math.round((subtotal + tax) * 100) / 100;
 
-    return [subtotal, tax, total];
+    return [subtotal.toFixed(2), tax.toFixed(2), total.toFixed(2)];
   }
+  // asign variables that need to be printed onto the screen
   const summary = fetchSummary();
   const subtotal = summary[0];
   const tax = summary[1];

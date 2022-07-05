@@ -4,6 +4,7 @@ import albumData from '../albumData';
 
 export default function AlbumDetails({
   name, artist, img, price, cartArray, setCart, id, backgroundColor,
+  subtotalState, setSubtotal, items, setItems,
 }) {
   const [displayModal, setDisplayModal] = useState(false);
 
@@ -40,6 +41,10 @@ export default function AlbumDetails({
           img={img}
           price={price}
           cartArray={cartArray}
+          subtotalState={subtotalState}
+          setSubtotal={setSubtotal}
+          items={items}
+          setItems={setItems}
         />
       </div>
       )}
