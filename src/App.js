@@ -42,11 +42,11 @@ function App() {
       <BrowserRouter>
         <Navbar cartArray={cartArray} />
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop />} />
+          <Route exact path="/shopping-page/" element={<Home />} />
+          <Route path="/shopping-page/shop" element={<Shop />} />
           {albumRoutes}
-          <Route path="/cart" element={<Cart cartArray={cartArray} setCart={setCart} subtotalState={subtotalState} setSubtotal={setSubtotal} />} />
-          <Route path="/checkout" element={<FakeStore />} />
+          <Route path="/shopping-page/cart" element={<Cart cartArray={cartArray} setCart={setCart} subtotalState={subtotalState} setSubtotal={setSubtotal} />} />
+          <Route path="/shopping-page/checkout" element={<FakeStore />} />
         </Routes>
         <Footer />
       </BrowserRouter>

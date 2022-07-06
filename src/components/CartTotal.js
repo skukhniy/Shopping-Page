@@ -42,8 +42,8 @@ export default function CartTotal({ cartArray }) {
           <span>{`$${total}`}</span>
         </h4>
       </div>
-      <Link to="/checkout"><button id="checkoutButton" type="button">Check Out</button></Link>
-      <Link to="/checkout">
+      <Link to="/shopping-page/checkout"><button id="checkoutButton" type="button">Check Out</button></Link>
+      <Link to="/shopping-page/checkout">
         <button type="button" id="paypalCheckout">
           <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" />
         </button>

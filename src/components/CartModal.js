@@ -31,7 +31,7 @@ export default function CartModal({
         {`Subtotal (${items} items):`}
         <span>{`$${subtotalState}`}</span>
       </div>
-      <Link to="/cart"><button type="button">View Cart</button></Link>
+      <Link to="/shopping-page/cart"><button type="button">View Cart</button></Link>
     </div>
   );
 }

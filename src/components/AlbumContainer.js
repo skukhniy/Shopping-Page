@@ -5,7 +5,7 @@ export default function AlbumContainer({
   imgsrc, name, artist, price, id,
 }) {
   return (
-    <Link to={`/shop/${id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+    <Link to={`/shopping-page/shop/${id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
       <div id="shopCard">
         <img src={imgsrc} alt="album" />
         <h3>{name}</h3>
