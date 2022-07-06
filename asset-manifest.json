@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/shopping-page/static/css/main.2d7028ff.css",
+    "main.css": "/shopping-page/static/css/main.7bcb3f50.css",
     "main.js": "/shopping-page/static/js/main.0bd381f9.js",
     "static/media/vinyl-shop-1.jpeg": "/shopping-page/static/media/vinyl-shop-1.b60a02167d9a73af17cd.jpeg",
     "index.html": "/shopping-page/index.html",
-    "main.2d7028ff.css.map": "/shopping-page/static/css/main.2d7028ff.css.map",
+    "main.7bcb3f50.css.map": "/shopping-page/static/css/main.7bcb3f50.css.map",
     "main.0bd381f9.js.map": "/shopping-page/static/js/main.0bd381f9.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d7028ff.css",
+    "static/css/main.7bcb3f50.css",
     "static/js/main.0bd381f9.js"
   ]
 }
