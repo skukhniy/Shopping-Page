@@ -4,6 +4,7 @@ import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Shop from './components/Shop';
 import Cart from './components/Cart';
+import Footer from './components/Footer';
 import './styles/App.scss';
 import AlbumDetails from './components/AlbumDetails';
 import albumData from './albumData';
@@ -47,6 +48,7 @@ function App() {
           <Route path="/cart" element={<Cart cartArray={cartArray} setCart={setCart} subtotalState={subtotalState} setSubtotal={setSubtotal} />} />
           <Route path="/checkout" element={<FakeStore />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   );
