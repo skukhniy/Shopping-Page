@@ -25,7 +25,7 @@ export default function CartCard({
 
   return (
     <div id="cartCardContainer">
-      <Link to={`/shopping-page/shop/${id}`}>
+      <Link to={`/shop/${id}`}>
         <img src={img} alt="album cover" />
       </Link>
       <p className="albumName">{`${artist} - ${name} `}</p>
