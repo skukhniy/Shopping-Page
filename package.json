@@ -1,7 +1,7 @@
 {
   "name": "shop_page",
   "version": "0.1.0",
-  "homepage": "https://skukhniy.github.io/Shopping-Page",
+  "homepage": "https://skukhniy.github.io/shopping-page",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.1.1",
