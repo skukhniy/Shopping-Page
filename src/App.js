@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import Shop from './components/Shop';
@@ -39,7 +39,7 @@ function App() {
   ));
   return (
     <div>
-      <BrowserRouter>
+      <HashRouter>
         <Navbar cartArray={cartArray} />
         <Routes>
           <Route exact path="/shopping-page/" element={<Home />} />
@@ -49,7 +49,7 @@ function App() {
           <Route path="/shopping-page/checkout" element={<FakeStore />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
