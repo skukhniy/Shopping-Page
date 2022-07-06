@@ -24,13 +24,13 @@ export default function Navbar({ cartArray }) {
       <nav>
         <ul>
           <li>
-            <Link to="/shopping-page/">Home</Link>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/shopping-page/shop">Shop</Link>
+            <Link to="/shop">Shop</Link>
           </li>
           <li>
-            <Link to="/shopping-page/cart" id="shopping-cart-a">
+            <Link to="/cart" id="shopping-cart-a">
               <FaShoppingCart id="shopping-cart" size="1.5em" />
               {cartNumber}
             </Link>
