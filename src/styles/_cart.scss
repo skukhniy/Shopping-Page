@@ -1,6 +1,8 @@
 #cartContainer{
   display:flex;
   flex-direction: row;
+  justify-content: space-around;
+  height:100vh;
 
   #cartEmpty{
     width:640px;
@@ -65,12 +67,11 @@
   
   #cartTotalContainer{
     margin-top:5vw;
-    margin-left: 10vw;
     border: 1px black solid;
     padding-left:10px;
     padding-right:10px;
     padding-bottom:10px;
-    width:22.5vw;
+    width:275px;
     margin-bottom:50px;
     h3{
       padding-bottom: 15px;
