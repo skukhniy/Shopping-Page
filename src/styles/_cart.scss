@@ -11,6 +11,8 @@
 
   #cartList{
     margin-left: 5vw;
+    overflow-y: auto;
+    height:500px;
     h3{
       padding-bottom:15px;
       border-bottom: 1px solid grey;
@@ -41,6 +43,16 @@
       margin-right:5px; 
       color:maroon;
     }
+    a {
+      text-decoration: none;
+      &:visited{
+        text-decoration: none;
+        color:inherit;
+      }
+      &:hover{
+        text-decoration: underline;
+      }
+    }
   }
 
   #deleteItem{
@@ -59,6 +71,7 @@
     padding-right:10px;
     padding-bottom:10px;
     width:22.5vw;
+    margin-bottom:50px;
     h3{
       padding-bottom: 15px;
       border-bottom: 1px solid grey;

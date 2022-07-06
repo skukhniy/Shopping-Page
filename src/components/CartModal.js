@@ -7,7 +7,6 @@ export default function CartModal({
   // calculate new totals
   let subtotal = 0;
   let itemTotal = 0;
-  console.log(cartArray);
   cartArray.forEach((item) => {
     subtotal += (item.quantity * item.price);
     itemTotal += item.quantity;

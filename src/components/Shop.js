@@ -3,6 +3,7 @@ import albumData from '../albumData';
 import AlbumContainer from './AlbumContainer';
 
 export default function Shop() {
+  window.scrollTo(0, 0);
   const renderItems = albumData.map((albums) => (
     <AlbumContainer
       imgsrc={albums.image}

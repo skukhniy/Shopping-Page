@@ -6,6 +6,7 @@ export default function AlbumDetails({
   name, artist, img, price, cartArray, setCart, id, backgroundColor,
   subtotalState, setSubtotal, items, setItems,
 }) {
+  window.scrollTo(0, 0);
   const [displayModal, setDisplayModal] = useState(false);
 
   const [quantity, setQuantity] = useState(1);
@@ -33,7 +34,6 @@ export default function AlbumDetails({
 
   return (
     <div id="albumDetails" style={{ backgroundColor: `${backgroundColor}` }}>
-      {displayModal && (
       <div className={`Modal ${displayModal ? 'Show' : ''}`}>
         <CartModal
           name={name}
@@ -47,7 +47,6 @@ export default function AlbumDetails({
           setItems={setItems}
         />
       </div>
-      )}
       <div id="albumContainer">
         <img src={img} alt="album cover" />
       </div>

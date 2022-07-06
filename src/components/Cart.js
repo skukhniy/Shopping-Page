@@ -5,6 +5,7 @@ import CartTotal from './CartTotal';
 export default function Cart({
   cartArray, setCart, subtotalState, setSubtotal,
 }) {
+  window.scrollTo(0, 0);
   let cartCards = cartArray.map((albums) => (
     <CartCard
       name={albums.name}

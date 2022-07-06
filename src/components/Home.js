@@ -3,6 +3,7 @@ import vinylShop from '../assets/vinyl-shop-1.jpeg';
 import NewArrivals from './NewArrivals';
 
 export default function Home() {
+  window.scrollTo(0, 0);
   return (
     <div>
       <div id="AboutDiv">

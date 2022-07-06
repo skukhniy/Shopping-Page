@@ -4,12 +4,34 @@
   background-color: rgb(55, 35, 35);
   color:rgb(255, 255, 255);
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  padding-top: 10px;
+  position: relative;
+  bottom:0;
+  overflow:hidden;
 
   h3{
     margin: 0;
+    margin-bottom: 5px;
+  }
+  svg{
+    margin-top:5px;
+  }
+  p{
+    margin:0;
+  }
+  a{
+    color:white;
+    font-weight: 100;
+    font-size: small;
+    text-decoration: none;
+
+    &:visited{
+      color: white
+    }
+    &:hover{
+      text-decoration: underline;
+    }
   }
 };

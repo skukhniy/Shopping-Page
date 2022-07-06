@@ -1,14 +1,15 @@
 .Modal{
   position:fixed;
-  right:100vw;
+  right:-100vh;
   background-color: white;
   width:25%;
   height:330px;
   z-index:10;
-  transition: left 10s ease-out;
+  transition: right 0.8s ease-out;
 }
 .Modal.Show{
   right:0;
+  
 }
 
 .Overlay{

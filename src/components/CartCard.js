@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
 
 export default function CartCard({
@@ -24,7 +25,9 @@ export default function CartCard({
 
   return (
     <div id="cartCardContainer">
-      <img src={img} alt="album cover" />
+      <Link to={`/shop/${id}`}>
+        <img src={img} alt="album cover" />
+      </Link>
       <p className="albumName">{`${artist} - ${name} `}</p>
       <input type="number" pattern="[0-9]*" min="1" max="9" defaultValue={albumQuantity} onChange={updateQuantity} />
       <p className="price">{`$${price}`}</p>
