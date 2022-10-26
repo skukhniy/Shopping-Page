@@ -1,5 +1,7 @@
 # Mock E-Commerce Store
 
+![store pic](https://www.stanislavkukhniy.com/static/media/shop-screenshot.560bc942.png)
+
 ### [Live Demo](https://skukhniy.github.io/shopping-page/)
 
 ## Getting started
