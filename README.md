@@ -4,17 +4,6 @@
 
 ### [Live Demo](https://skukhniy.github.io/shopping-page/)
 
-## Getting started
-
-After cloning the repository, run:
-
-```elm
-npm install
-npm start
-```
-
-The site is now running at `localhost:3000`.
-
 #### 📝 Description
 This an e-commerce website using React for a fake vinyl store.
 
@@ -30,3 +19,14 @@ This an e-commerce website using React for a fake vinyl store.
  * React Router
  * SCSS
  * Jest
+
+## Getting started
+
+After cloning the repository, run:
+
+```elm
+npm install
+npm start
+```
+
+The site is now running at `localhost:3000`.
