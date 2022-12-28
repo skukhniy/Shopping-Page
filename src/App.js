@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-wrap-multilines */
 import React, { useState } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
@@ -19,7 +20,7 @@ function App() {
   const albumRoutes = albumData.map((albums) => (
     <Route
       path={`/shop/${albums.id}`}
-      element={(
+      element={
         <AlbumDetails
           name={albums.name}
           artist={albums.artist}
@@ -34,18 +35,28 @@ function App() {
           items={items}
           setItems={setItems}
         />
-)}
+      }
     />
   ));
   return (
-    <div>
+    <div id="APP">
       <HashRouter>
         <Navbar cartArray={cartArray} />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           {albumRoutes}
-          <Route path="/cart" element={<Cart cartArray={cartArray} setCart={setCart} subtotalState={subtotalState} setSubtotal={setSubtotal} />} />
+          <Route
+            path="/cart"
+            element={
+              <Cart
+                cartArray={cartArray}
+                setCart={setCart}
+                subtotalState={subtotalState}
+                setSubtotal={setSubtotal}
+              />
+            }
+          />
           <Route path="/checkout" element={<FakeStore />} />
         </Routes>
         <Footer />
