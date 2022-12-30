@@ -1,25 +1,25 @@
-#Navbar{
+#Navbar {
   display: flex;
   flex-direction: row;
   position: sticky;
   justify-content: space-between;
   background-color: #d9975a;
-  width:100%;
+  width: 100%;
   align-items: center;
-  height:15.5vh;
-  top:0px;
+  height: 85px;
+  top: 0px;
   z-index: 10;
 
-  h1{
+  h1 {
     display: flex;
     align-items: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
-  #vinyl{
-    padding-left:10px;
-    padding-right:15px;
+  #vinyl {
+    padding-left: 10px;
+    padding-right: 15px;
   }
-  ul{
+  ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
@@ -30,42 +30,63 @@
     padding-right: 20px;
     font-size: large;
   }
-  a, a:visited, a:hover, a:active {
-    color:inherit;
+  a,
+  a:visited,
+  a:hover,
+  a:active {
+    color: inherit;
   }
-  a{
+  a {
     display: block;
     padding: 8px;
     text-decoration: none;
   }
-  #shopping-cart{
+  #shopping-cart {
     padding-left: 10px;
     padding-right: 25px;
   }
-  #shopping-cart-a{
-    padding-top:5px;
-    border-bottom:0px;
+  #shopping-cart-a {
+    padding-top: 5px;
+    border-bottom: 0px;
     position: relative;
   }
-  #cartNumber{
+  #cartNumber {
     background-color: red;
-    color:white;
+    color: white;
     border-radius: 50%;
-    width:20px;
-    height:20px;
+    width: 20px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: absolute;
-    bottom:0;
-    right:0;
-    transform: translate(-110%,-30%);
+    bottom: 0;
+    right: 0;
+    transform: translate(-110%, -30%);
 
-
-
-    p{
+    p {
       text-align: center;
-      font-size:small;
+      font-size: small;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    h1 {
+      font-size: large;
+    }
+    li {
+      padding-right: 0;
+    }
+    a {
+      font-size: small;
+    }
+    #cartNumber {
+      height: 15px;
+      width: 15px;
+      transform: translate(-160%, -40%);
+
+      p {
+        font-size: x-small;
+      }
     }
   }
 }
