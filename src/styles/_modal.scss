@@ -6,6 +6,9 @@
   height: 350px;
   z-index: 10;
   transition: right 0.8s ease-out;
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
 }
 .Modal.Show {
   right: 0;
