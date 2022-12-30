@@ -48,6 +48,11 @@
   h5 {
     font-weight: 200;
   }
+  @media only screen and (max-width: 600px) {
+    #shopCard {
+      padding-right: 0;
+    }
+  }
   #shopCard > p {
     color: white;
     font-style: italic;
@@ -65,4 +70,11 @@
 }
 #carousel {
   padding-top: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+  #shopCard > img {
+    height: 100px;
+    width: 100px;
+  }
 }

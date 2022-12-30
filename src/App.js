@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-wrap-multilines */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
@@ -12,9 +12,30 @@ import albumData from './albumData';
 import FakeStore from './components/FakeStore';
 
 function App() {
+  // function to grab current window size
+  function getWindowSize() {
+    const { innerWidth, innerHeight } = window;
+    return { innerWidth, innerHeight };
+  }
+
+  // init states
   const [cartArray, setCart] = useState([]);
   const [subtotalState, setSubtotal] = useState(0);
   const [items, setItems] = useState(0);
+  const [windowSize, setWindowSize] = useState(getWindowSize());
+
+  // adjust window size, accounts for resizing.
+  useEffect(() => {
+    function handleWindowResize() {
+      setWindowSize(getWindowSize());
+    }
+
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
 
   // generates webpages for every album
   const albumRoutes = albumData.map((albums) => (
@@ -43,7 +64,7 @@ function App() {
       <HashRouter>
         <Navbar cartArray={cartArray} />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Home windowSize={windowSize} />} />
           <Route path="/shop" element={<Shop />} />
           {albumRoutes}
           <Route
